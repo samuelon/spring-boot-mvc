@@ -8,11 +8,7 @@
 
 <body>
 
-Hello World of Spring!
-
-<br><br>
-
-Student Name: <span th:text="${param.studentName}"/>
+    <p class="text-2xl text-gray-600 italic"th:text=" 'Time on the server is ' + ${theDate}"></p>
 
 </body>
 
