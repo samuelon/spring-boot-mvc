@@ -3,10 +3,7 @@ package com.luv2code.springboot.thymeleaf.controller;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class HelloWorldController {
@@ -45,7 +42,7 @@ public class HelloWorldController {
         return "helloworld";
     }
     //new method
-    @RequestMapping("/processFormVersionThree")
+    @PostMapping("/processFormVersionThree")
     public String processFormVersionThree(
             @RequestParam("studentName") String theName, Model theModel){
         // read the request parameter from the HTML form and bind to theName;

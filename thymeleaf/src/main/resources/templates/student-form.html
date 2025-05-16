@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Student Registration Form</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+
+Hello World of Spring!
+<h3> Student Registration Form</h3>
+<br><br>
+<form th:action="@{/processStudentForm}" th:object="${student}" method="POST">
+
+    First Name: <input type="text" th:field="*{firstName}"/>
+
+    <br><br>
+
+    Last Name: <input type="text" th:field="*{lastName}"/>
+
+    <input type="submit" value="submit"/>
+</form>
+<br><br>
+
+</body>
+
+</html>
+
+
