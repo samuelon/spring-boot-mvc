@@ -14,13 +14,33 @@ Hello World of Spring!
 <br><br>
 <form th:action="@{/processStudentForm}" th:object="${student}" method="POST">
 
-    First Name: <input type="text" th:field="*{firstName}"/>
+    First Name: <input  class=" border-1 rounded-sm " type="text" th:field="*{firstName}"/>
 
     <br><br>
 
-    Last Name: <input type="text" th:field="*{lastName}"/>
+    Last Name: <input class=" border-1 rounded-sm " type="text" th:field="*{lastName}"/>
 
+    <br><br>
+    Country:
+    <select th:field="*{country}">
+
+        <option th:each="tempCountry: ${countries}" th:value="${tempCountry}" th:text="${tempCountry}"></option>
+
+    </select>
+
+    <br><br>
+
+    Favourite Programming Language:
+
+    <label>
+        <input type="radio" th:field="*{favouriteLanguage}" th:value="Go" > Go </input>
+        <input type="radio" th:field="*{favouriteLanguage}" th:value="Java" > Java </input>
+        <input type="radio" th:field="*{favouriteLanguage}" th:value="C+'+'+'+'" > C++ </input>
+    </label>
+
+    <br><br>
     <input type="submit" value="submit"/>
+
 </form>
 <br><br>
 
