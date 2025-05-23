@@ -32,10 +32,11 @@ public class CustomerController {
             BindingResult theBindingResult) {
         //@Valid uses the @NotNull validation.~~
         //Binding Result is result of the validation
-        System.out.println("Last name: |" + theCustomer.getLastName());
+
         if (theBindingResult.hasErrors()){
             return "customer-form";
         } else {
+            System.out.println("Last name: |" + theCustomer.getLastName());
             return "customer-confirmation";
         }
     }
