@@ -16,6 +16,12 @@ public class StudentController {
     @Value("${countries}")
     private List<String> countries;
 
+    @Value("${languages}") //match up with app prop.
+    private List<String> languages;
+
+    @Value("${operatingSystems}") //match up with app prop.
+    private List<String> operatingSystems;
+
     @GetMapping("/showStudentForm")
     public String showForm(Model theModel) {
 
@@ -28,6 +34,10 @@ public class StudentController {
         // add the list of countries to model
         theModel.addAttribute("countries", countries);
 
+        // add the list of languages to model
+        theModel.addAttribute("languages", languages);
+        // add the list of OS to model
+        theModel.addAttribute("operatingSystems", operatingSystems);
         return "student-form";
     }
 
