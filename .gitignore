@@ -5,7 +5,7 @@ target/
 !**/src/test/**/target/
 
 # Ignore application config with secrets
-mvc-crud/src/main/resources/application.properties
+/mvc-crud/src/main/resources/application.properties
 
 
 ### STS ###
